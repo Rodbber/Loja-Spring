@@ -1,0 +1,639 @@
+{
+	"info": {
+		"_postman_id": "815a202d-3f87-4888-976a-d6ea9c4270ed",
+		"name": "Loja",
+		"description": "# Introduction\nAPI de controle de caixa e simples de estoque\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29026087"
+	},
+	"item": [
+		{
+			"name": "Empresas/Loja",
+			"item": [
+				{
+					"name": "Todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/empresas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"empresas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Novo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"string:255\",\r\n    \"cnpj\":\"string:14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/empresas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"empresas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"string:255\",\r\n    \"cnpj\":\"string:14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/empresas/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"empresas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unico",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/empresas/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"empresas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/empresas/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"empresas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "Todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/produtos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Novo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"string:255\",\r\n    \"valor\":10.00,\r\n    \"quantidade\":101,\r\n    \"empresa_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/produtos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"string:255\",\r\n    \"valor\":10.00,\r\n    \"quantidade\":101,\r\n    \"empresa_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/produtos/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unico",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{host}}/produtos/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/produtos/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/clientes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Novo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"string:255\",\r\n    \"cpf\": \"string:11\",\r\n    \"empresa_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/clientes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"string:255\",\r\n    \"cpf\": \"string:11\",\r\n    \"empresa_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/clientes/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/clientes/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/clientes/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carrinhos",
+			"item": [
+				{
+					"name": "Todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/carrinhos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"carrinhos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Novo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"empresa_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/carrinhos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"carrinhos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/carrinhos/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"carrinhos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/carrinhos/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"carrinhos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carrinho produtos",
+			"item": [
+				{
+					"name": "Todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/carrinho/produtos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"carrinho",
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Novo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"carrinho_id\": \"string:uuid\",\r\n    \"produto_id\": \"string:uuid\",\r\n    \"quantidade\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/carrinho/produtos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"carrinho",
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/carrinho/produtos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"carrinho",
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/carrinho/produtos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"carrinho",
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vendas",
+			"item": [
+				{
+					"name": "Todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/vendas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"vendas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Novo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente_id\": 1,\r\n    \"carrinho_id\":\"string:uuid\",\r\n    \"valor\":25.50,\r\n    \"acrescimo_desconto\": -5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/vendas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"vendas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente_id\": 1,\r\n    \"carrinho_id\":\"string:uuid\",\r\n    \"valor\":25.50,\r\n    \"acrescimo_desconto\": -5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/vendas/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"vendas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/vendas/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"vendas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/vendas/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"vendas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
